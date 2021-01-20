@@ -1,0 +1,60 @@
+Started GET "/" for 127.0.0.1 at 2021-01-20 23:36:18 +0530
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/aswath641/.rvm/gems/ruby-2.6.3/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/aswath641/.rvm/gems/ruby-2.6.3/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.8ms | Allocations: 518)
+Completed 200 OK in 33ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 4368)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-01-20 23:36:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for 127.0.0.1 at 2021-01-20 23:38:36 +0530
+  
+SyntaxError (/home/aswath641/CSF_todo_manager/config/routes.rb:3: syntax error, unexpected ':', expecting end
+  get "todos" , to : "todos#index"  
+                   ^
+/home/aswath641/CSF_todo_manager/config/routes.rb:4: syntax error, unexpected end, expecting end-of-input):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+Started GET "/todos" for 127.0.0.1 at 2021-01-20 23:39:23 +0530
+  
+SyntaxError (/home/aswath641/CSF_todo_manager/config/routes.rb:3: syntax error, unexpected ':', expecting end
+  get "todos" , to : "todos#index"  
+                   ^
+/home/aswath641/CSF_todo_manager/config/routes.rb:4: syntax error, unexpected end, expecting end-of-input):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected ':', expecting end
+config/routes.rb:4: syntax error, unexpected end, expecting end-of-input
+Started GET "/todos" for 127.0.0.1 at 2021-01-20 23:40:43 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 30)
+Completed 200 OK in 99ms (Views: 84.2ms | ActiveRecord: 0.0ms | Allocations: 1997)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-01-20 23:40:44 +0530
+Processing by TodosController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-01-21 00:26:58 +0530
+Processing by TodosController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 409)
+
+
