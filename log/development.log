@@ -58,3 +58,12 @@ Processing by TodosController#index as HTML
 Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 409)
 
 
+Started GET "/todos" for 127.0.0.1 at 2021-01-21 00:54:06 +0530
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (94.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 30)
+Completed 200 OK in 464ms (Views: 22.3ms | ActiveRecord: 348.9ms | Allocations: 8552)
+
+
