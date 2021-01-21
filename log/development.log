@@ -181,3 +181,274 @@ Processing by TodosController#show as HTML
 Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 854)
 
 
+Started GET "/todos/create" for 127.0.0.1 at 2021-01-21 01:11:57 +0530
+Processing by TodosController#create as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 482)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/todos_controller.rb:14:in `parse'
+app/controllers/todos_controller.rb:14:in `create'
+Started GET "/todos/create?todo_text=my%20todo%20through%20the%20query%20string&due_date=2021%20jan%2019" for 127.0.0.1 at 2021-01-21 01:12:41 +0530
+Processing by TodosController#create as HTML
+  Parameters: {"todo_text"=>"my todo through the query string", "due_date"=>"2021 jan 19"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTodo Create (137.3ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "my todo through the query string"], ["due_date", "2021-01-19"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (63.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 293ms (Views: 1.2ms | ActiveRecord: 210.1ms | Allocations: 8769)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-01-21 01:12:48 +0530
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" ORDER BY "todos"."due_date" ASC[0m
+  ↳ app/controllers/todos_controller.rb:3:in `map'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 1089)
+
+
+Started POST "/todos/create" for ::1 at 2021-01-21 11:03:02 +0530
+  
+ArgumentError (Before process_action callback :verify_token_authenticity has not been defined):
+  
+app/controllers/todos_controller.rb:2:in `<class:TodosController>'
+app/controllers/todos_controller.rb:1:in `<main>'
+Started POST "/todos/create" for ::1 at 2021-01-21 11:04:16 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"2021 jan 20"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (89.4ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "My todo"], ["due_date", "2021-01-20"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 596ms (Views: 24.2ms | ActiveRecord: 297.5ms | Allocations: 8017)
+
+
+Started GET "/todos" for ::1 at 2021-01-21 11:04:31 +0530
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" ORDER BY "todos"."due_date" ASC[0m
+  ↳ app/controllers/todos_controller.rb:5:in `map'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 1193)
+
+
+Started GET "/todos/7" for ::1 at 2021-01-21 11:04:35 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1284)
+
+
+Started POST "/todos/create" for ::1 at 2021-01-21 11:05:05 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"20 jan 2021"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "My todo"], ["due_date", "2021-01-20"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Completed 200 OK in 38ms (Views: 1.0ms | ActiveRecord: 23.9ms | Allocations: 2297)
+
+
+Started GET "/todos/7" for ::1 at 2021-01-21 11:05:08 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 845)
+
+
+Started GET "/todos/8" for ::1 at 2021-01-21 11:05:11 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 844)
+
+
+Started POST "/todos/create" for ::1 at 2021-01-21 11:05:35 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"jan 20 2021"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "My todo"], ["due_date", "2021-01-20"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (23.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 33ms (Views: 0.6ms | ActiveRecord: 24.0ms | Allocations: 2302)
+
+
+Started POST "/todos/create" for ::1 at 2021-01-21 11:05:53 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"20 2021 jan"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "My todo"], ["due_date", "2021-01-01"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (61.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 74ms (Views: 0.9ms | ActiveRecord: 62.4ms | Allocations: 2334)
+
+
+Started GET "/todos/10" for ::1 at 2021-01-21 11:05:57 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 845)
+
+
+Started POST "/todos/create" for ::1 at 2021-01-21 11:06:21 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"2021 29 feb"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 543)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/todos_controller.rb:16:in `parse'
+app/controllers/todos_controller.rb:16:in `create'
+Started POST "/todos/create" for ::1 at 2021-01-21 11:06:39 +0530
+Processing by TodosController#create as */*
+  Parameters: {"todo_text"=>"My todo", "due_date"=>"2021 28 feb"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed") VALUES ($1, $2, $3) RETURNING "id"[0m  [["todo_text", "My todo"], ["due_date", "2021-02-28"], ["completed", false]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 17.9ms | Allocations: 2299)
+
+
+Started GET "/todos/10" for ::1 at 2021-01-21 13:04:55 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mTodo Load (115.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 26)
+Completed 200 OK in 551ms (Views: 2.5ms | ActiveRecord: 218.3ms | Allocations: 5237)
+
+
+Started GET "/todos/" for ::1 at 2021-01-21 13:05:07 +0530
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" ORDER BY "todos"."due_date" ASC[0m
+  ↳ app/controllers/todos_controller.rb:5:in `map'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 1129)
+
+
+Started PATCH "/todos/11" for ::1 at 2021-01-21 13:11:36 +0530
+Processing by TodosController#update as */*
+  Parameters: {"due_date"=>"20th feb 2020", "id"=>"11"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTodo Update (0.9ms)[0m  [1m[33mUPDATE "todos" SET "due_date" = $1 WHERE "todos"."id" = $2[0m  [["due_date", "2020-02-20"], ["id", 11]]
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (1410.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+No template found for TodosController#update, rendering head :no_content
+Completed 204 No Content in 1476ms (ActiveRecord: 1419.9ms | Allocations: 8418)
+
+
+Started PATCH "/todos/11" for ::1 at 2021-01-21 13:11:52 +0530
+Processing by TodosController#update as */*
+  Parameters: {"due_date"=>"20th feb 2021", "id"=>"11"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTodo Update (0.7ms)[0m  [1m[33mUPDATE "todos" SET "due_date" = $1 WHERE "todos"."id" = $2[0m  [["due_date", "2021-02-20"], ["id", 11]]
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (25.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 51ms (Views: 1.1ms | ActiveRecord: 34.0ms | Allocations: 5390)
+
+
+Started GET "/todos/11" for ::1 at 2021-01-21 13:12:18 +0530
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 844)
+
+
+Started PATCH "/todos/11" for ::1 at 2021-01-21 13:12:30 +0530
+Processing by TodosController#update as */*
+  Parameters: {"due_date"=>"20th feb 2021", "completed"=>"true", "id"=>"11"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:26:in `update'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 948)
+
+
+Started PATCH "/todos/11" for ::1 at 2021-01-21 13:12:40 +0530
+Processing by TodosController#update as */*
+  Parameters: {"due_date"=>"20th feb 2021", "completed"=>"true", "id"=>"11"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTodo Update (0.5ms)[0m  [1m[33mUPDATE "todos" SET "completed" = $1 WHERE "todos"."id" = $2[0m  [["completed", true], ["id", 11]]
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 48ms (Views: 1.2ms | ActiveRecord: 29.7ms | Allocations: 5322)
+
+
+Started PATCH "/todos/11" for ::1 at 2021-01-21 13:12:48 +0530
+Processing by TodosController#update as */*
+  Parameters: {"completed"=>"false", "id"=>"11"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTodo Update (0.7ms)[0m  [1m[33mUPDATE "todos" SET "completed" = $1 WHERE "todos"."id" = $2[0m  [["completed", false], ["id", 11]]
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:37:in `update'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 40ms (Views: 0.9ms | ActiveRecord: 22.3ms | Allocations: 2795)
+
+
