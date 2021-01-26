@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Manager App | Rails</title>
+
+    <!-- Including custom styles -->
+    <link rel="stylesheet" href="todo-app.css">
+
+  </head>
+  <body>
+
+    <main class="TodoMain">
+
+      <h1 class="TodoMain-title">
+        My Todo List
+      </h1>
+
+      <div class="AddTodo">
+        <input placeholder="What's next ?" type="text" class="AddTodo-text">
+        <input type="date" class="AddTodo-date">
+        <button type="button" class="AddTodo-button">
+          Add
+        </button>
+      </div>
+
+      <div class="ExistingTodos">
+        <section class="Existing-Section">
+
+          <div class="Existing-Section-Header">
+            <h3 class="Existing-Section-Title">
+              Due Today
+            </h3>
+            <p>
+              <span class="pending">0</span>/<span class="complete">4</span>
+            </p>
+          </div>
+
+          <div class="Existing-Section-Body">
+            <ul class="Existing-Section-List">
+              <li class="Existing-ListItem">
+                <input class="Existing-List-CheckBox" type="checkbox">
+                <p class="Existing-Todo-Text">Submit SaaS 201 course</p>
+                <span class="Existing-Todo-IsOverdue">Overdue</span>
+                <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                      </svg>
+                    </a>
+                  </span>
+                </li>
+                <li class="Existing-ListItem">
+                  <input class="Existing-List-CheckBox" type="checkbox">
+                  <p class="Existing-Todo-Text">Submit SaaS 201 course</p>
+                  <span class="Existing-Todo-IsOverdue">Overdue</span>
+                  <span class="Existing-Todo-Delete"><img src="" alt=""></span>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+
+          <section class="Existing-Section">
+
+            <div class="Existing-Section-Header">
+              <h3 class="Existing-Section-Title">
+                Due Tomorrow
+              </h3>
+
+              <p>
+                <span class="pending">0</span>/<span class="complete">4</span>
+              </p>
+
+            </div>
+
+            <div class="Existing-Section-Body">
+              <ul class="Existing-Section-List">
+                <li class="Existing-ListItem">
+                  <input class="Existing-List-CheckBox" type="checkbox">
+                  <p class="Existing-Todo-Text">Submit SaaS 201 course</p>
+                  <span class="Existing-Todo-IsOverdue">Overdue</span>
+                  <span class="Existing-Todo-Delete"><img src="" alt=""></span>
+                </li>
+                <li>
+
+                </li>
+                <li></li>
+              </ul>
+            </div>
+
+          </section>
+          <section class="Existing-Section">
+
+            <div class="Existing-Section-Header">
+              <h3 class="Existing-Section-Title">
+                Remaining
+              </h3>
+
+              <p>
+                <span class="pending">0</span>/<span class="complete">4</span>
+              </p>
+
+            </div>
+
+            <div class="Existing-Section-Body">
+              <ul class="Existing-Section-List">
+                <li class="Existing-ListItem">
+                  <input class="Existing-List-CheckBox" type="checkbox">
+                  <p class="Existing-Todo-Text">Submit SaaS 201 course</p>
+                  <!-- <span class="Existing-Todo-IsOverdue">Overdue</span> -->
+                  <p class="Todo-Due">Jan 21</p>
+                  <span class="Existing-Todo-Delete"><img src="" alt=""></span>
+                </li>
+                <li>
+
+                </li>
+                <li></li>
+              </ul>
+            </div>
+
+          </section>
+        </div>
+
+      </main>
+    </body>
+  </html>
