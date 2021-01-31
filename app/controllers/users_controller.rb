@@ -57,7 +57,4 @@ class UsersController < ApplicationController
 
     render plain: User.where(email: email, password: pwd).exists?
   end
-
-  def delete
-  end
 end
