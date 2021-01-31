@@ -2768,3 +2768,40 @@ Processing by TodosController#index as HTML
 Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 3.4ms | Allocations: 12379)
 
 
+Started GET "/todos" for 127.0.0.1 at 2021-01-31 14:48:52 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-01-31') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date < '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 10.5ms | Allocations: 3108)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-01-31') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date = '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 10.0ms | Allocations: 2848)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-01-31') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date > '2021-01-31')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 9.5ms | Allocations: 2857)
+  Rendered todos/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 11116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 14077)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 11.8ms | Allocations: 14420)
+
+
