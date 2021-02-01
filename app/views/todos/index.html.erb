@@ -3,12 +3,11 @@
   <h1 class="TodoMain-title">
     My Todo List
   </h1>
-
-  <form action="/todos" method="POST" class="AddTodo">
+  <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
     <input name="todo_text" placeholder="What's next ?" type="text" class="AddTodo-text">
     <input name="due_date" type="date" class="AddTodo-date">
     <input type="submit" class="AddTodo-button" value="Add">
-  </form>
+  <% end %>
 
 
   <div class="ExistingTodos">
