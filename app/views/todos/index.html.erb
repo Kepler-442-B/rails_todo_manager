@@ -4,7 +4,7 @@
     My Todo List
   </h1>
   <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
-    <input name="todo_text" placeholder="What's next ?" type="text" class="AddTodo-text">
+    <%= text_field_tag "todo_text", "", placeholder: "What's next ?", class: "AddTodo-text" %>
     <input name="due_date" type="date" class="AddTodo-date">
     <input type="submit" class="AddTodo-button" value="Add">
   <% end %>
