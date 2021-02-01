@@ -4,13 +4,11 @@
     My Todo List
   </h1>
 
-  <div class="AddTodo">
-    <input placeholder="What's next ?" type="text" class="AddTodo-text">
-    <input type="date" class="AddTodo-date">
-    <button type="button" class="AddTodo-button">
-      Add
-    </button>
-  </div>
+  <form action="/todos" method="POST" class="AddTodo">
+    <input name="todo_text" placeholder="What's next ?" type="text" class="AddTodo-text">
+    <input name="due_date" type="date" class="AddTodo-date">
+    <input type="submit" class="AddTodo-button" value="Add">
+  </form>
 
 
   <div class="ExistingTodos">

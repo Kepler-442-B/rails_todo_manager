@@ -14,11 +14,16 @@
       <% todos.each do |todo| %>
         <% if not(overdue and todo.completed) %>
         <li class="Existing-ListItem">
-          <input class="Existing-List-CheckBox"
-          <% if todo.completed %>
-            checked
+          
+          <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+            <input class="Existing-List-CheckBox"
+            name="completed"
+            <%= todo.completed ? "checked" : "" %>
+            type="checkbox"
+            onclick="this.form.submit()"
+            />
           <% end %>
-          type="checkbox">
+
           <p class="Existing-Todo-Text
             <% if todo.completed %>
               strike-through
@@ -30,12 +35,9 @@
           <% end %>
 
           <span class="Existing-Todo-Delete">
-                  <a href="" class="Delete-Todo">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
-                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
-                    </svg>
-                  </a>
+            <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+              <input type="image" src="trash-can-outline.png" class="Delete-Todo" onclick="this.form.submit()">
+            <% end %>
           </span>
         </li>
         <% end %>
