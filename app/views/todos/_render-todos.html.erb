@@ -12,6 +12,7 @@
     <ul class="Existing-Section-List">
       <% todos.count %>
       <% todos.each do |todo| %>
+        <% if not(overdue and todo.completed) %>
         <li class="Existing-ListItem">
           <input class="Existing-List-CheckBox"
           <% if todo.completed %>
@@ -37,6 +38,7 @@
                   </a>
           </span>
         </li>
+        <% end %>
       <% end %>
 
     </ul>

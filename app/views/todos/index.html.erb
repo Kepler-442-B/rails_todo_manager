@@ -15,21 +15,24 @@
 
   <div class="ExistingTodos">
     <%= render partial: "render-todos", locals: {
-      section_title: "Overdue",
-      todos: Todo.overdue,
-      show_due_date: true
-    } %>
+                 section_title: "Overdue",
+                 todos: Todo.overdue,
+                 show_due_date: true,
+                 overdue: true,
+               } %>
 
     <%= render partial: "render-todos", locals: {
-      section_title: "Due Today",
-      todos: Todo.due_today,
-      show_due_date: false
-    } %>
+                 section_title: "Due Today",
+                 todos: Todo.due_today,
+                 show_due_date: false,
+                 overdue: false,
+               } %>
 
     <%= render partial: "render-todos", locals: {
-      section_title: "Due Later",
-      todos: Todo.due_later,
-      show_due_date: true
-    } %>
+                 section_title: "Due Later",
+                 todos: Todo.due_later,
+                 show_due_date: true,
+                 overdue: false,
+               } %>
   </div>
 </main>
