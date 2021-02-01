@@ -2812,3 +2812,1504 @@ Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 11.8ms | Allocations: 14
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   [1m[35m (468.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "saas_db"[0m
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:53:51 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:32 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:33 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:33 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:34 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:34 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:35 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 17:54:35 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "saas_db" does not exist
+):
+  
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.1) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.0) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (118.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (115.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5350916442594422490)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210126085528)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (125.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210126085528"]]
+  [1m[36mTRANSACTION (59.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTodos (20210201115954)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (755.0ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "todo_text" text, "due_date" date, "completed" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210201115954"]]
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 12:27:05.770150"], ["updated_at", "2021-02-01 12:27:05.770150"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5350916442594422490)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo_text", "Submit assignment"], ["due_date", "2021-01-31"], ["completed", false], ["created_at", "2021-02-01 12:27:33.854691"], ["updated_at", "2021-02-01 12:27:33.854691"]]
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo_text", "Pay rent"], ["due_date", "2021-02-01"], ["completed", true], ["created_at", "2021-02-01 12:27:33.878741"], ["updated_at", "2021-02-01 12:27:33.878741"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo_text", "File taxes"], ["due_date", "2021-02-02"], ["completed", false], ["created_at", "2021-02-01 12:27:33.895660"], ["updated_at", "2021-02-01 12:27:33.895660"]]
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo_text", "Call Acme Corp."], ["due_date", "2021-02-02"], ["completed", false], ["created_at", "2021-02-01 12:27:33.913160"], ["updated_at", "2021-02-01 12:27:33.913160"]]
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("todo_text", "due_date", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo_text", "Service vehicle"], ["due_date", "2021-02-01"], ["completed", false], ["created_at", "2021-02-01 12:27:35.052676"], ["updated_at", "2021-02-01 12:27:35.052676"]]
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:05:17 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 1.8ms | Allocations: 1754)
+  Rendered todos/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 2625)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.0ms | Allocations: 5292)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <%= if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <%= if todo.completed>
+              strike-through
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <%= if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <%= if todo.completed>
+23:                  strike-through
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:17: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/todos/_render-todos.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected ')', expecting end
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:05:44 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 2.6ms | Allocations: 1476)
+  Rendered todos/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1964)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2036)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 3200)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              strike-through
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  strike-through
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:05:45 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 1.2ms | Allocations: 1464)
+  Rendered todos/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1680)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2014)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              strike-through
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  strike-through
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:05:46 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 1.1ms | Allocations: 1464)
+  Rendered todos/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1680)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2013)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              strike-through
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  strike-through
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:09 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 3.1ms | Allocations: 1478)
+  Rendered todos/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1921)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1992)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 3066)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              "strike-through"
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  "strike-through"
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:10 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 0.8ms | Allocations: 1466)
+  Rendered todos/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3610)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3681)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.8ms | Allocations: 4012)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              "strike-through"
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  "strike-through"
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:12 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  Rendered todos/_render-todos.html.erb (Duration: 0.8ms | Allocations: 1466)
+  Rendered todos/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1675)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="Existing-Section">
+  <div class="Existing-Section-Header">
+    <h3 class="Existing-Section-Title">
+      <%= section_title %>
+    </h3>
+    <p>
+      <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+    </p>
+  </div>
+
+  <div class="Existing-Section-Body">
+    <ul class="Existing-Section-List">
+      <% todos.count %>
+      <% todos.each do |todo| %>
+        <li class="Existing-ListItem">
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed>
+              "strike-through"
+            <% end %>
+          "><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+          <% end %>
+
+          <span class="Existing-Todo-Delete">
+                  <a href="" class="Delete-Todo">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+                        19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                  </a>
+          </span>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+
+</section>
+):
+1:    <section class="Existing-Section">
+2:      <div class="Existing-Section-Header">
+3:        <h3 class="Existing-Section-Title">
+4:          <%= section_title %>
+5:        </h3>
+6:        <p>
+7:          <span class="completed"><%= todos.completed.count %></span> / <span class="total"><%= todos.count %></span>
+8:        </p>
+9:      </div>
+10:    
+11:      <div class="Existing-Section-Body">
+12:        <ul class="Existing-Section-List">
+13:          <% todos.count %>
+14:          <% todos.each do |todo| %>
+15:            <li class="Existing-ListItem">
+16:              <input class="Existing-List-CheckBox"
+17:              <% if todo.completed %>
+18:                checked
+19:              <% end %>
+20:              type="checkbox">
+21:              <p class="Existing-Todo-Text
+22:                <% if todo.completed>
+23:                  "strike-through"
+24:                <% end %>
+25:              "><%= todo.todo_text %></p>
+26:    
+27:              <% if show_due_date %>
+28:                <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
+29:              <% end %>
+30:    
+31:              <span class="Existing-Todo-Delete">
+32:                      <a href="" class="Delete-Todo">
+33:                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+34:                          <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0
+35:                            19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+36:                        </svg>
+37:                      </a>
+38:              </span>
+39:            </li>
+40:          <% end %>
+41:    
+42:        </ul>
+43:      </div>
+44:    
+45:    </section>
+  
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/_render-todos.html.erb:24: syntax error, unexpected '<'
+app/views/todos/_render-todos.html.erb:47: syntax error, unexpected end-of-input, expecting end
+app/views/todos/index.html.erb:17
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:27 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 39.6ms | Allocations: 7386)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 7.7ms | Allocations: 2866)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 10.7ms | Allocations: 2886)
+  Rendered todos/index.html.erb within layouts/application (Duration: 63.9ms | Allocations: 13772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 332.8ms | Allocations: 30462)
+Completed 200 OK in 339ms (Views: 322.0ms | ActiveRecord: 16.1ms | Allocations: 31561)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:36 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 16.9ms | Allocations: 3231)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 8.8ms | Allocations: 2865)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 8.0ms | Allocations: 2886)
+  Rendered todos/index.html.erb within layouts/application (Duration: 38.3ms | Allocations: 9615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 12767)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 5.3ms | Allocations: 13855)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:49 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 13.5ms | Allocations: 3226)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 9.9ms | Allocations: 2865)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 10.4ms | Allocations: 2886)
+  Rendered todos/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 9604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 12755)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 5.0ms | Allocations: 13837)
+
+
+Started GET "/todos" for 127.0.0.1 at 2021-02-01 18:06:58 +0530
+Processing by TodosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todos/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date < '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 9.3ms | Allocations: 3221)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date = '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 9.2ms | Allocations: 2865)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01') AND (completed = TRUE)[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:13
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (due_date > '2021-02-01')[0m
+  ↳ app/views/todos/_render-todos.html.erb:14
+  Rendered todos/_render-todos.html.erb (Duration: 7.9ms | Allocations: 2886)
+  Rendered todos/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 9599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 12749)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 3.6ms | Allocations: 13831)
+
+

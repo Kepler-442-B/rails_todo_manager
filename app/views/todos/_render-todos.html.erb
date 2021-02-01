@@ -13,8 +13,16 @@
       <% todos.count %>
       <% todos.each do |todo| %>
         <li class="Existing-ListItem">
-          <input class="Existing-List-CheckBox" type="checkbox">
-          <p class="Existing-Todo-Text"><%= todo.todo_text %></p>
+          <input class="Existing-List-CheckBox"
+          <% if todo.completed %>
+            checked
+          <% end %>
+          type="checkbox">
+          <p class="Existing-Todo-Text
+            <% if todo.completed %>
+              strike-through
+            <% end %>
+          "><%= todo.todo_text %></p>
 
           <% if show_due_date %>
             <p class="Existing-Todo-DueDate"><%= todo.due_date.to_s(:short) %></p>
